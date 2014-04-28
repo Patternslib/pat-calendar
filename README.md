@@ -30,3 +30,8 @@ The following properties/values are supported in the `data-pat-calendar` data at
 | `title-day`               | dddd, MMM d, YYYY	|               |                   |               |
 | `title-month`             | MMMM YYYY			|               |                   |               |
 | `title-week`              | MMM D YYYY		|               |                   |               |
+
+Tests
+-----
+
+Simply run `make check`
