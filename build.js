@@ -1,12 +1,7 @@
 ({
-    baseUrl: "src",
+    baseUrl: ".",
     out: "bundle.js",
-    name: "almond",
-    include: "patterns",
-
-    wrap: {
-        endFile: "src/wrap-end.js"
-    },
+    name: "bower_components/almond/almond.js",
 
     paths: {
         // Externals
