@@ -422,16 +422,17 @@ define([
                 }
                 if (calKeys.indexOf(calendar.storage.prefix + ":" + this.id) !== -1) {
                     if (calendar.storage.get(this.id) === false) {
-                        $(this).prop("checked", false).trigger("change");
+                        $(this).prop("checked", false);
                         $(this).parent().removeClass("checked");
                         $(this).parent().addClass("unchecked");
                     } else {
-                        $(this).prop("checked", true).trigger("change");
+                        $(this).prop("checked", true);
                         $(this).parent().removeClass("unchecked");
                         $(this).parent().addClass("checked");
                     }
                 }
             });
+            calendar._refetchEvents(calendar.$el);
         },
 
         parseEvents: function($el, timezone) {
