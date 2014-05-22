@@ -177,11 +177,17 @@ define([
                 }
             };
 
+            var cats = [];
             $el.categories = $el.find(".cal-events .cal-event")
                 .map(function() {
                     return this.className.split(" ").filter(function(cls) {
                         return (/^cal-cat/).test(cls);
                     });
+                }).filter(function(cat) {
+                    if (cats.indexOf(String(this)) == -1) {
+                        cats.push(String(this));
+                        return true;
+                    }
                 });
             this._registerEventRefetchers($el);
             this._registerCategoryControls($el);
