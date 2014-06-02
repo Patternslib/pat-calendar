@@ -301,13 +301,13 @@ define([
              * of the calendar's event objects.
              */
             $el.on("keyup.pat-calendar", ".filter .search-text",
-                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 400));
+                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 500));
             $el.on("click.pat-calendar", ".filter .search-text[type=search]",
-                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 400));
+                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 500));
             $el.on("change.pat-calendar", ".filter select[name=state]",
-                   calendar._refetchEvents.bind(calendar, $el));
+                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 200));
             $el.on("change.pat-calendar", ".filter .check-list",
-                   calendar._refetchEvents.bind(calendar, $el));
+                   utils.debounce(calendar._refetchEvents.bind(calendar, $el), 200));
         },
 
         _registerCategoryControls: function($el) {
@@ -325,8 +325,8 @@ define([
                 if (this.id) {
                     calendar.storage.set(this.id, this.checked);
                 }
-                calendar._refetchEvents($el);
-             });
+            });
+            $el.$catControls.on("change.pat-calendar", utils.debounce(calendar._refetchEvents.bind(calendar, $el), 300));
         },
 
         _registerCalendarControls: function($el) {
