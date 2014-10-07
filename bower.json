@@ -11,7 +11,7 @@
     "logging": "~1.0.1",
     "moment": "~2.6.0",
     "moment-timezone": "~0.0.6",
-    "patternslib": "2.0.1",
+    "patternslib": "~2.0.4",
     "requirejs": ""
   }
 }
