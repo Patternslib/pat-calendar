@@ -12,7 +12,7 @@ define([
     "pat-store",
     "pat-utils",
     "pat-registry",
-    "pat-calendar-moment-timezone-data",
+    "moment-timezone-data",
     "jquery.fullcalendar.dnd",
     "jquery.fullcalendar"
 ], function($, logger, Parser, store, utils, registry) {
@@ -184,7 +184,7 @@ define([
                         return (/^cal-cat/).test(cls);
                     });
                 }).filter(function(cat) {
-                    if (cats.indexOf(String(this)) == -1) {
+                    if (cats.indexOf(String(this)) === -1) {
                         cats.push(String(this));
                         return true;
                     }
@@ -286,7 +286,7 @@ define([
                     }
                     calendar.$el.fullCalendar("option", "height", calendar.$el.find(".fc-content").height());
                 });
-                $(document).on("pat-update.pat-calendar", function(ev, data) {
+                $(document).on("pat-update.pat-calendar", function(ev) {
                     // Don't redraw if the change was in a tooltip, otherwise
                     // it will close the tooltip prematurely (assuming here
                     // it's a calendar event tooltip).

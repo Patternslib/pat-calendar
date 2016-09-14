@@ -12,9 +12,9 @@
         "jquery.fullcalendar.dnd": "bower_components/fullcalendar/lib/jquery-ui.custom.min",
         // Calendar pattern
         "moment": "bower_components/moment/moment",
-        "moment-timezone": "bower_components/moment-timezone/moment-timezone",
+        //"moment-timezone": "bower_components/moment-timezone/moment-timezone",
         "pat-calendar": "src/calendar",
-        "pat-calendar-moment-timezone-data": "src/moment-timezone-data"
+        "moment-timezone-data": "src/moment-timezone-with-data-2010-2020"
     },
 
     shim: {
