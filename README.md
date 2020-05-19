@@ -1,6 +1,16 @@
 pat-calendar
 ============
 
+---
+
+**Note: deprecated pattern**
+
+This pattern is integrated into Patterns directly.<br>
+Please use the pattern at: https://github.com/Patternslib/Patterns/tree/master/src/pat/calendar
+
+---
+
+
 Patternslib plugin for [FullCalendar](http://arshaw.com/fullcalendar)
 
 Usage
